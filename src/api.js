@@ -1,5 +1,5 @@
 // Punto base de la API local (ajusta el puerto si usas otro)
-const API = "http://localhost:3001/contactos";
+const API = "http://localhost:3002/contactos";
 
 // GET: listar contactos
 export async function listarContactos() {
@@ -13,17 +13,18 @@ export async function listarContactos() {
 
 // POST: crear contacto
 export async function crearContacto(data) {
-  // Hacemos un POST a /contactos con body en JSON
+  const { id: _id, ...resto } = data;
+
   const res = await fetch(API, {
     method: "POST",
-    headers: { "Content-Type": "application/json" }, // Indicamos JSON
-    body: JSON.stringify(data), // Enviamos el objeto del formulario
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(resto),
   });
-  // Validamos respuesta
+
   if (!res.ok) throw new Error("Error al crear el contacto");
-  // Devolvemos el contacto creado que regresa la API (con id)
   return res.json();
 }
+
 
 // DELETE: eliminar contacto por id
 export async function eliminarContactoPorId(id) {
