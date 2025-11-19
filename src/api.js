@@ -1,37 +1,23 @@
-// Punto base de la API local (ajusta el puerto si usas otro)
-const API = "http://localhost:3002/contactos";
+const API_URL = "http://localhost:3002/contactos";
 
-// GET: listar contactos
 export async function listarContactos() {
-  // Hacemos un GET a /contactos
-  const res = await fetch(API);
-  // Si la respuesta no es OK (>=400), lanzamos error
+  const res = await fetch(API_URL);
   if (!res.ok) throw new Error("Error al listar contactos");
-  // Parseamos JSON y lo retornamos (array de contactos)
-  return res.json();
+  return await res.json();
 }
 
-// POST: crear contacto
-export async function crearContacto(data) {
-  const { id: _id, ...resto } = data;
-
-  const res = await fetch(API, {
+export async function crearContacto(contacto) {
+  const res = await fetch(API_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(resto),
+    body: JSON.stringify(contacto),
   });
-
-  if (!res.ok) throw new Error("Error al crear el contacto");
-  return res.json();
+  if (!res.ok) throw new Error("Error al crear contacto");
+  return await res.json();
 }
 
-
-// DELETE: eliminar contacto por id
 export async function eliminarContactoPorId(id) {
-  // Hacemos un DELETE a /contactos/:id
-  const res = await fetch(`${API}/${id}`, { method: "DELETE" });
-  // Validamos respuesta
-  if (!res.ok) throw new Error("Error al eliminar el contacto");
-  // Devolvemos true indicando éxito
+  const res = await fetch(`${API_URL}/${id}`, { method: "DELETE" });
+  if (!res.ok) throw new Error("Error al eliminar contacto");
   return true;
 }
