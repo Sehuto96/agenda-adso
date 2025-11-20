@@ -1,3 +1,11 @@
 {
-  "contactos": []
+  "contactos": [
+    {
+      "id": "2de9",
+      "nombre": "camilo",
+      "telefono": "3022369471",
+      "correo": "kevin@gmail.com",
+      "etiqueta": "Hermano"
+    }
+  ]
 }
