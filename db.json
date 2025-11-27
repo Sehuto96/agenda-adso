@@ -1,32 +1,18 @@
 {
   "contactos": [
     {
-      "id": "2de9",
-      "nombre": "camilo",
-      "telefono": "3022369471",
-      "correo": "kevin@gmail.com",
-      "etiqueta": "Hermano"
-    },
-    {
-      "id": "4827",
-      "nombre": "Sebastian",
-      "telefono": "3025894123",
-      "correo": "sehuto96@gmail.com",
-      "etiqueta": "Mio"
-    },
-    {
-      "id": "aee5",
-      "nombre": "David Vargas",
-      "telefono": "3225556",
-      "correo": "kevin@gmail.com",
-      "etiqueta": "Compañero"
-    },
-    {
       "id": "0e63",
       "nombre": "Brandon Maldonado",
       "telefono": "3025894123",
       "correo": "brandon@gmail.com",
       "etiqueta": "Compañero"
+    },
+    {
+      "id": "73fb",
+      "nombre": "Kevin Marin",
+      "telefono": "3023787213",
+      "correo": "david.vargas@gmail.com",
+      "etiqueta": "Hermano"
     }
   ]
 }
