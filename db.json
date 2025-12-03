@@ -1,17 +1,31 @@
 {
   "contactos": [
     {
-      "id": "0e63",
-      "nombre": "Brandon Maldonado",
+      "nombre": "Brandon Maldonado Sena",
       "telefono": "3025894123",
       "correo": "brandon@gmail.com",
-      "etiqueta": "Compañero"
+      "etiqueta": "Compañero",
+      "id": "0e63"
     },
     {
       "id": "73fb",
       "nombre": "Kevin Marin",
       "telefono": "3023787213",
       "correo": "david.vargas@gmail.com",
+      "etiqueta": "Hermano"
+    },
+    {
+      "id": "cb84",
+      "nombre": "Carlos Santiz",
+      "telefono": "3059412369",
+      "correo": "carlitos_Trave@gmail.com",
+      "etiqueta": "Amiga"
+    },
+    {
+      "id": "ea3c",
+      "nombre": "camilo Torres ",
+      "telefono": "3025894123",
+      "correo": "maryirle71@hotmail.com",
       "etiqueta": "Hermano"
     }
   ]
